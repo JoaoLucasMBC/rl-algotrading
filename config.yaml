@@ -1,0 +1,90 @@
+# Hyperparameters
+gamma: 0.99
+epsilon_start: 1.0
+epsilon_min: 0.01
+epsilon_decay: 0.995
+target_update: 1  # Update every step for soft updates
+tau: 0.001        # Soft update factor
+memory_size: 10000
+learning_rate: 0.0001
+batch_size: 64
+
+# Model
+hidden_size: 128  # Reduced from 512
+num_layers: 2     # Reduced from 3
+dropout: 0.5      # Increased from 0.2
+
+# Data collection
+tickers:
+  # Oil & Gas
+  - PETR3.SA
+  - PETR4.SA
+  - PRIO3.SA
+  # Banks
+  - BBAS3.SA
+  - ITUB3.SA
+  - ITUB4.SA
+  - BBDC3.SA
+  - BBDC4.SA
+  - SANB11.SA
+  # Mining & Materials
+  - VALE3.SA
+  - SUZB3.SA
+  - GGBR4.SA
+  - USIM5.SA
+  - CSNA3.SA
+  # Retail
+  - LREN3.SA
+  - MGLU3.SA
+  - ARZZ3.SA
+  - PCAR3.SA
+  - BHIA3.SA
+  # Energy & Utilities
+  - ENEV3.SA
+  - EQTL3.SA
+  - ELET3.SA
+  - ELET6.SA
+  - CMIG4.SA
+  - CPLE6.SA
+  # Industrials
+  - WEGE3.SA
+  - EMBR3.SA
+  - RAIL3.SA
+  - AZUL4.SA
+  # Consumer
+  - RADL3.SA
+  - ABEV3.SA
+  - BEEF3.SA
+  - JBSS3.SA
+  - SMTO3.SA
+  # Telecom & Tech
+  - VIVT3.SA
+  - TIMS3.SA
+  - TOTS3.SA
+  # Real Estate & Construction
+  - CYRE3.SA
+  - MRVE3.SA
+  - EZTC3.SA
+  # Conglomerates
+  - CSAN3.SA
+  - UGPA3.SA
+  # Services
+  - SMFT3.SA
+  - HAPV3.SA
+  - RENT3.SA
+
+start_date: '2019-01-01'  # Extended from 2020 to 2019 (6 years of data)
+end_date: '2024-12-31'
+train_split: 0.7
+val_split: 0.15
+test_split: 0.15
+
+# RSI
+rsi_period: 2
+rsi_entry_threshold: 5
+max_hold_days: 20
+lstm_warmup: 12
+
+# Training
+epochs: 5
+save_every: 1
